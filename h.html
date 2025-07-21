@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CYBERSECURE Sign Up</title>
+    <link rel="stylesheet" href="h.css" />
+</head>
+<body>
+    <nav>
+        <h1>CYBERSECURE</h1>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+
+    <form action="https://formsubmit.co/abatajames7@gmail.com" method="POST">
+        <h2>Sign Up</h2>
+
+        <div class="inputbox">
+            <input type="text" name="username" required />
+            <label>Username</label>
+        </div>
+
+        <div class="inputbox">
+            <input type="email" name="email" required />
+            <label>Email</label>
+        </div>
+
+        <div class="inputbox">
+            <input type="password" name="pw" required />
+            <label>Create Password</label>
+        </div>
+
+        <div class="inputbox">
+            <input type="password" name="confirmpw" required />
+            <label>Confirm Password</label>
+        </div>
+
+        <div class="inputbox">
+            <input type="submit" value="Create" />
+        </div>
+
+        <p>Already have an account? <a href="#">Login</a></p>
+    </form>
+
+    <script>
+        const labels = document.querySelectorAll('label');
+        labels.forEach(label => {
+            label.innerHTML = label.innerText
+                .split('')
+                .map((letter, i) => `<span style="transition-delay:${i * 50}ms">${letter}</span>`)
+                .join('');
+        });
+    </script>
+</body>
+</html>
